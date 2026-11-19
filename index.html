@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Papan Tugas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Papan <span>Tugas</span></h1>
+      <p class="sub" id="tanggal"></p>
+    </div>
+    <button class="theme" id="tema" type="button" aria-label="Ganti tema terang atau gelap">Ganti tema</button>
+  </header>
+
+  <section class="progress" aria-label="Progres tugas">
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="stat"><span id="ringkas">0 dari 0 selesai</span><span id="persen">0%</span></div>
+  </section>
+
+  <form id="form">
+    <input type="text" id="input" placeholder="Tulis tugas baru" maxlength="120" autocomplete="off" aria-label="Tugas baru">
+    <button class="add" type="submit">Tambah</button>
+  </form>
+
+  <div class="filters" id="filters">
+    <button type="button" data-f="semua" aria-pressed="true">Semua</button>
+    <button type="button" data-f="aktif" aria-pressed="false">Belum selesai</button>
+    <button type="button" data-f="selesai" aria-pressed="false">Selesai</button>
+  </div>
+
+  <ul id="daftar"></ul>
+  <div class="foot"><button class="clear" id="hapusSelesai" type="button">Hapus yang selesai</button></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
